@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Title</title>
+	</head>
+	<style type="text/css">
+		body {
+			background-color: rgb(57, 60, 106);
+		}
+		h1 {
+			/*position: absolute;*/
+			color: DodgerBlue;
+			margin: auto; 
+			padding-left: 25%;
+		}
+		canvas {
+			    padding-left: 0;
+    			padding-right: 0;
+    			float: right;
+   				margin-left: auto;
+    			margin-right: auto;
+    			display: block;
+		}
+		#heading {
+			margin: auto;
+			padding: : 50px;
+
+		}
+
+		.gameSelect {
+			font-family: sans-serif;
+			font-size: 25px;
+			position: absolute;
+			background-color:  rgb(40,170,110);  /*colors are to be determined later*/
+			width: 15%; 
+			float: left;
+			height: 80%;
+		}
+
+		.gameButton {
+			background-color:#44c767;
+			-moz-border-radius:28px;
+			-webkit-border-radius:28px;
+			border-radius:28px;
+			border:1px solid #18ab29;
+			display:inline-block;
+			cursor:pointer;
+			color:#ffffff;
+			font-family:Arial;
+			font-size:17px;
+			padding:16px 31px;
+			text-decoration:none;
+			text-shadow:0px 1px 0px #2f6627;	
+			margin-bottom: 50px;	
+			margin-left: 30px;
+
+		}
+	</style>
+    
+	<body>
+		<div id = heading>
+		<h1>insert name of website here</h1>
+		<h2></h2>	
+		</div>
+		<div class = gameSelect>
+			<h2>  1, 2, or 3</h2>
+	
+				<div class = gameButton>
+						<button id = buttonOneDec></button>
+						</div>
+				<div class = gameButton>
+						<button id = buttonTwoDec></button>
+						</div>
+				<div class = gameButton>
+						<button id = buttonThrDec></button>
+						</div>
+				<div class = gameButton>
+						<button id = reset></button>
+						</div>
+			
+		</div>
+
+	</body>
+
+	<script type="text/javascript" src="p5.js"></script>
+	<script type="text/javascript" src="sketch.js"></script>
+	<script type="text/javascript" src="hoppycat.js"></script>
+	<script type="text/javascript" src="snake.js"></script>
+	<script type="text/javascript">
+		var canvasEl = document.querySelector("#buttonOneDec")
+		canvasEl.style.backgroundColor = "MediumSeaGreen";
+		canvasEl.innerHTML = "Game 1";
+		var canvasEl = document.querySelector("#buttonTwoDec")
+		canvasEl.style.backgroundColor = "MediumSeaGreen";
+		canvasEl.innerHTML = "Game 2";
+		var canvasEl = document.querySelector("#buttonThrDec")
+		canvasEl.style.backgroundColor = "MediumSeaGreen";
+		canvasEl.innerHTML = "Game 3";
+		var canvasEl = document.querySelector("#reset")
+		canvasEl.style.backgroundColor = "salmon";
+		canvasEl.innerHTML = "HOME";
+
+		
+		var button1 = document.getElementById("buttonOneDec");
+		var onButtonOneClick = function() {
+        	mode = 1;
+		};
+		button1.addEventListener("click", onButtonOneClick);
+		
+
+		var button2 = document.getElementById("buttonTwoDec");
+		var onButtonTwoClick = function() {
+        	mode = 2;
+		};
+		button2.addEventListener("click", onButtonTwoClick);
+
+
+		var button3 = document.getElementById("buttonThrDec");
+		var onButtonThreeClick = function() {
+        	mode = 3;
+		};
+		button3.addEventListener("click", onButtonThreeClick);
+
+
+		var buttonHOME = document.getElementById("reset");
+		var onButtonFourClick = function() {
+        	mode = 4;
+		};
+		buttonHOME.addEventListener("click", onButtonFourClick);
+	</script>
+	
+	
+
+</html>
