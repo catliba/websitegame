@@ -22,8 +22,8 @@ cat.prototype.fall = function() {
 };
 
 cat.prototype.checkForFoodGrab = function(catFood) {
-	if ((catFood.x >= this.x && catFood.x <= (this.x +40)) &&
-		catFood.y >= this.y && catFood.y <= (this.x +40))
+	if ((catFood.x >= (this.x) && catFood.x <= (this.x + 40)) &&
+		catFood.y >= (this.y) && catFood.y <= (this.y + 40))
 	 {
         catFood.y = -400;
         this.food++;
