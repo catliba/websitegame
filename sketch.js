@@ -1,6 +1,6 @@
 /* 1366 by 728 */
 
-var mode = 1;
+var mode = 4;
 // hoppy cat game
 var grassXs = [];
 var grassWidth;
@@ -36,11 +36,11 @@ function setup() {
 	}
 	console.log(Cat);
 	console.log(food);
-
+    /*
 	////Snake Game
     s = new Snake();
     snakeFood = createVector(random(width),random(height));
-    frameRate(10);
+    frameRate(10); */
 }
 
 //master function
@@ -87,7 +87,8 @@ function draw() {
     }
 
     else if(mode === 2) { 
-        if (s.eat(snakeFood)) {
+        background(0,255,0);
+       /* if (s.eat(snakeFood)) {
             pickLocation();
         }
     	background(51);
@@ -95,23 +96,17 @@ function draw() {
         s.update();
         s.show();
         fill(255,0,100);
-        rect(snakeFood.x,snakeFood.y,scl,scl);
+        rect(snakeFood.x,snakeFood.y,scl,scl);*/
        
     }
 
     else if(mode === 3) {
-    	background(0,255,0);
+    	background(0,0,255);
     }
 
     else if(mode === 4) {
 		background(255,0,0);
+        textSize(50);
+        text("press a button on the left to begin",100,200);
     }
 };
-
-
-
-
-
-
-
-
